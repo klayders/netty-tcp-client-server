@@ -4,7 +4,8 @@ import java.time.Duration;
 import reactor.netty.tcp.TcpServer;
 
 public class TcpServerTest {
-
+//  TODO: make
+//   curl localhost:8080
   public static void main(String[] args) throws InterruptedException {
     TcpServer.create()
         .wiretap(true)
