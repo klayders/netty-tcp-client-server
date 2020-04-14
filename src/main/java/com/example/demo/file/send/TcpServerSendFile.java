@@ -1,4 +1,4 @@
-package com.example.demo.file;
+package com.example.demo.file.send;
 
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -8,8 +8,7 @@ import reactor.netty.tcp.TcpServer;
 
 public class TcpServerSendFile {
 
-  //  TODO: make
-  //   curl localhost:8080
+
   public static void main(String[] args) throws InterruptedException {
     TcpServer.create()
         .wiretap(true)
@@ -17,7 +16,7 @@ public class TcpServerSendFile {
         .handle((inbound, outbound) ->
                 {
                   try {
-                    Path file = Paths.get(TcpServerSendFile.class.getResource("/application.properties").toURI());
+                    Path file = Paths.get(TcpServerSendFile.class.getResource("/help.md").toURI());
                     return outbound.sendFile(file);
                   } catch (URISyntaxException e) {
                       e.printStackTrace();

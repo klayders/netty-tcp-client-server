@@ -1,16 +1,10 @@
-package com.example.demo.file;
+package com.example.demo.file.send;
 
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
-import java.time.Duration;
-import reactor.core.publisher.Mono;
 import reactor.netty.tcp.TcpClient;
-import reactor.netty.tcp.TcpServer;
 
-public class TcpClientSendFile {
+public class TcpClientReceiveFile {
 
-  //  TODO: make
-  //   curl localhost:8080
+
   public static void main(String[] args) throws InterruptedException {
     TcpClient.create()
         .wiretap(true)
